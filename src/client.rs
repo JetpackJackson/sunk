@@ -151,7 +151,7 @@ impl Client {
         let path = self.url.path();
 
         // FIXME FIXME BAD
-        let mut url = [scheme, "://", "localhost", ":4533/rest/"].concat();
+        let mut url = [scheme, "://localhost:4533/rest/"].concat();
         url.push_str(query);
         url.push('?');
         url.push_str(&self.auth.to_url(self.target_ver));
