@@ -150,8 +150,8 @@ impl Client {
         let addr = self.url.host_str().ok_or(Error::Url(UrlError::Address))?;
         let path = self.url.path();
 
-        // FIXME
-        let mut url = [scheme, "://", addr, path, ":4533/rest/"].concat();
+        // FIXME FIXME BAD
+        let mut url = [scheme, "://", "localhost", ":4533/rest/"].concat();
         url.push_str(query);
         url.push('?');
         url.push_str(&self.auth.to_url(self.target_ver));
